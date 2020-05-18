@@ -36,7 +36,7 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
         sinalA = new Switch();
         sinalB = new Switch();
 
-        light = new Light(255, 0, 0, 255, 255, 255);
+        light = new Light(255, 0, 0, 0, 0, 0);
 
 
         //JLabel entrada = new JLabel("Entrada: ");
@@ -111,7 +111,11 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
 
             // ...então abrimos a janela seletora de cor...
             Color color = JColorChooser.showDialog(this, null, light.getColor());
-            light.setColor(color);
+            if (gate.read()) {
+                light.setColor(color);
+            } else {
+                light.setOffColor(color);
+            }
             // ...e chamamos repaint para atualizar a tela.
             repaint();
         }
