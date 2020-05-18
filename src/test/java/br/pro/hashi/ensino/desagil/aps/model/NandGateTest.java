@@ -1,9 +1,11 @@
 package br.pro.hashi.ensino.desagil.aps.model;
 
+
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 public class NandGateTest {
+
     @Test
     public void whenReceivingFalseAndFalseShouldReturnTrue() {
         NandGate gate = new NandGate();

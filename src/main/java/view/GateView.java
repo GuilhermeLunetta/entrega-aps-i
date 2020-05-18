@@ -36,7 +36,7 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
         sinalA = new Switch();
         sinalB = new Switch();
 
-        light = new Light(255, 0, 0);
+        light = new Light(255, 0, 0, 255, 255, 255);
 
 
         //JLabel entrada = new JLabel("Entrada: ");
@@ -160,7 +160,6 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
         // Desenha um quadrado cheio.
         g.setColor(light.getColor());
         g.fillOval(255, 114, 25, 25);
-
         // Linha necessária para evitar atrasos
         // de renderização em sistemas Linux.
         getToolkit().sync();
